@@ -6,6 +6,13 @@ namespace CandidateAPI.Data
 {
     public class CandidateRepository : ICandidateRepository
     {
+        private readonly CandidateDbContext _context;
+
+        public CandidateRepository(CandidateDbContext context)
+        {
+            _context = context;
+        }
+
         public void PostCandidate(Candidate candidate)
         {
             if (candidate == null)
