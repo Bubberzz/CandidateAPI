@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CandidateAPI.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,6 +30,8 @@ namespace CandidateAPI
             services.AddDbContext<CandidateDbContext>(options => options.UseInMemoryDatabase("Candidates"));
 
             services.AddControllers();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped<ICandidateRepository, CandidateRepository>();
         }
