@@ -22,3 +22,5 @@ C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreap
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.csproj.CopyComplete
+C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll

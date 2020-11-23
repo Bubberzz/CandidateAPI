@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "emnUZZFtE/V3K8QjgIDGpI7tpJaH+KPZ9a5tHJYz4CQERiC33RIzZRZwdyUgI+0lM2wWanA5/kdWwQXNxd2BFQ==",
+  "dgSpecHash": "qsSkrpRWpijuydZaJzmd8Z6J7ecU7t1jzJ6kEdI4rBxB5eHSiH7fbHjtePEeaRhaCqSuvcro+wEv5EepcI2lQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stan.bubbers\\source\\repos\\CandidateAPI\\CandidateAPI\\CandidateAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Stan.bubbers\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0\\microsoft.entityframeworkcore.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Stan.bubbers\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.0\\microsoft.entityframeworkcore.analyzers.5.0.0.nupkg.sha512",
     "C:\\Users\\Stan.bubbers\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.10\\microsoft.entityframeworkcore.design.3.1.10.nupkg.sha512",
+    "C:\\Users\\Stan.bubbers\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.0\\microsoft.entityframeworkcore.inmemory.5.0.0.nupkg.sha512",
     "C:\\Users\\Stan.bubbers\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.10\\microsoft.entityframeworkcore.relational.3.1.10.nupkg.sha512",
     "C:\\Users\\Stan.bubbers\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Stan.bubbers\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
