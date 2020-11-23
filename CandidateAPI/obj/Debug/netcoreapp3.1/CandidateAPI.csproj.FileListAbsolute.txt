@@ -139,8 +139,6 @@ C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreap
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.csproj.CoreCompileInputs.cache
-C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.dll
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.pdb
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.genruntimeconfig.cache
