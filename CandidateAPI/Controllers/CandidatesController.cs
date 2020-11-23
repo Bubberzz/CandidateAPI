@@ -29,8 +29,8 @@ namespace CandidateAPI.Controllers
         {
             if (skills == null)
             {
-                return NotFound("Please enter skills in the following format: \n" +
-                                "/candidates/search?skills=javascript,express,mongodb ");
+                return BadRequest("Please enter skills in the following format: \n" +
+                                  "/candidates/search?skills=javascript,express,mongodb ");
             }
             var value = skills.Split(',');
             var candidates = _repository.GetCandidates(value);
@@ -48,7 +48,7 @@ namespace CandidateAPI.Controllers
         {
             if (candidateCreateDto.Skills == null || candidateCreateDto.Skills.Length == 0)
             {
-                return NotFound("Please enter at least one skill");
+                return BadRequest("Please enter at least one skill");
             }
             var candidateModel = _mapper.Map<Candidate>(candidateCreateDto);
             _repository.PostCandidate(candidateModel);
