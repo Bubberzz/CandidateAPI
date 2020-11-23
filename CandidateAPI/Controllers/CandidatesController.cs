@@ -47,7 +47,7 @@ namespace CandidateAPI.Controllers
         public async Task<ActionResult<Candidate>> PostCandidate(CandidateCreateDto candidateCreateDto)
         {
             var candidateModel = _mapper.Map<Candidate>(candidateCreateDto);
-            _repository.AddCandidate(candidateModel);
+            _repository.PostCandidate(candidateModel);
             try
             {
                 var x = await _repository.SaveChanges() >= 0;
