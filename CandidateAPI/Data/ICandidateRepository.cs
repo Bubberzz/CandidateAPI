@@ -6,6 +6,6 @@ namespace CandidateAPI.Data
     public interface ICandidateRepository
     {
         IEnumerable<Candidate> GetCandidates(string[] skills);
-        void AddCandidate(Candidate candidate);
+        void PostCandidate(Candidate candidate);
     }
 }
