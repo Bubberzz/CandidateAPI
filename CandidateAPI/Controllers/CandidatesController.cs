@@ -1,8 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CandidateAPI.Data;
+using CandidateAPI.Dtos;
 using CandidateAPI.Models;
 
 namespace CandidateAPI.Controllers
@@ -11,52 +15,49 @@ namespace CandidateAPI.Controllers
     [ApiController]
     public class CandidatesController : ControllerBase
     {
-        private readonly CandidateDbContext _context;
+        private readonly ICandidateRepository _repository;
+        private readonly IMapper _mapper;
 
-        public CandidatesController(CandidateDbContext context)
+        public CandidatesController(ICandidateRepository repository, IMapper mapper)
         {
-            _context = context;
+            _repository = repository;
+            _mapper = mapper;
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Candidate>> GetCandidate(string id)
+        [HttpGet]
+        public async Task<ActionResult<Candidate>> GetCandidate([FromQuery] string skills)
         {
-            var candidate = await _context.Candidates.FindAsync(id);
-
-            if (candidate == null)
+            if (skills == null)
             {
-                return NotFound();
+                return NotFound("Please enter skills in the following format: \n" +
+                                "/candidates/search?skills=javascript,express,mongodb ");
+            }
+            var value = skills.Split(',');
+            var candidates = _repository.GetCandidates(value);
+
+            if (candidates?.Any() == true)
+            {
+                return Ok(_mapper.Map<IEnumerable<CandidateReadDto>>(candidates));
             }
 
-            return candidate;
+            return NotFound();
         }
 
         [HttpPost]
-        public async Task<ActionResult<Candidate>> PostCandidate(Candidate candidate)
+        public async Task<ActionResult<Candidate>> PostCandidate(CandidateCreateDto candidateCreateDto)
         {
-            _context.Candidates.Add(candidate);
+            var candidateModel = _mapper.Map<Candidate>(candidateCreateDto);
+            _repository.AddCandidate(candidateModel);
             try
             {
-                await _context.SaveChangesAsync();
+                _repository.SaveChanges();
             }
-            catch (DbUpdateException)
+            catch (ArgumentException)
             {
-                if (CandidateExists(candidate.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
+                return Conflict("ID already exists");
             }
 
-            return CreatedAtAction("GetCandidate", new { id = candidate.Id }, candidate);
-        }
-
-        private bool CandidateExists(string id)
-        {
-            return _context.Candidates.Any(e => e.Id == id);
+            return Ok();
         }
     }
 }
