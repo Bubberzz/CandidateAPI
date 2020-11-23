@@ -155,3 +155,7 @@ C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreap
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\runtimes\linux-mips64\native\libe_sqlite3.so
 C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.csproj.CoreCompileInputs.cache
+C:\Users\Stan.bubbers\source\repos\CandidateAPI\CandidateAPI\obj\Debug\netcoreapp3.1\CandidateAPI.MvcApplicationPartsAssemblyInfo.cache

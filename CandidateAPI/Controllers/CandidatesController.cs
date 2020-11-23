@@ -50,7 +50,7 @@ namespace CandidateAPI.Controllers
             _repository.PostCandidate(candidateModel);
             try
             {
-                var x = await _repository.SaveChanges() >= 0;
+                await _repository.SaveChanges();
             }
             catch (ArgumentException)
             {
