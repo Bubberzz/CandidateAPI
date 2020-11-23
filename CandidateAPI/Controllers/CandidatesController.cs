@@ -46,6 +46,10 @@ namespace CandidateAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Candidate>> PostCandidate(CandidateCreateDto candidateCreateDto)
         {
+            if (candidateCreateDto.Skills == null || candidateCreateDto.Skills.Length == 0)
+            {
+                return NotFound("Please enter at least one skill");
+            }
             var candidateModel = _mapper.Map<Candidate>(candidateCreateDto);
             _repository.PostCandidate(candidateModel);
             try
