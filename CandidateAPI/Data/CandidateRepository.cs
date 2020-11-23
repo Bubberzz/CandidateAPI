@@ -1,6 +1,7 @@
 ﻿using CandidateAPI.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CandidateAPI.Data
 {
@@ -26,6 +27,11 @@ namespace CandidateAPI.Data
         {
             var candidates = new List<Candidate>();
             return candidates;
+        }
+
+        public Task<int> SaveChanges()
+        {
+            return _context.SaveChangesAsync();
         }
     }
 }
