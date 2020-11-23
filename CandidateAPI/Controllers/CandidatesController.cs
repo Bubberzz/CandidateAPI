@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using CandidateAPI.Data;
 using CandidateAPI.Dtos;
 using CandidateAPI.Models;
@@ -57,7 +56,6 @@ namespace CandidateAPI.Controllers
             {
                 return Conflict("ID already exists");
             }
-
             return Ok();
         }
     }
