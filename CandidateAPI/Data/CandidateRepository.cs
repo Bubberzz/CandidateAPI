@@ -1,7 +1,9 @@
 ﻿using CandidateAPI.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using CandidateAPI.Middleware;
 
 namespace CandidateAPI.Data
 {
@@ -25,8 +27,8 @@ namespace CandidateAPI.Data
 
         public IEnumerable<Candidate> GetCandidates(string[] skills)
         {
-            var candidates = new List<Candidate>();
-            return candidates;
+            var bestMatch = new CalculateBestCandidate();
+            return bestMatch.ReturnResult(skills, _context.Candidates.ToList());
         }
 
         public Task<int> SaveChanges()

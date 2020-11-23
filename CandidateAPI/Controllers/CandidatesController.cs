@@ -24,8 +24,9 @@ namespace CandidateAPI.Controllers
             _mapper = mapper;
         }
 
+        [Route("search")]
         [HttpGet]
-        public async Task<ActionResult<Candidate>> GetCandidate([FromQuery] string skills)
+        public ActionResult<Candidate> GetCandidate([FromQuery] string skills)
         {
             if (skills == null)
             {
@@ -50,7 +51,7 @@ namespace CandidateAPI.Controllers
             _repository.PostCandidate(candidateModel);
             try
             {
-                await _repository.SaveChanges();
+                await _repository.SaveChanges().ConfigureAwait(false);
             }
             catch (ArgumentException)
             {

@@ -11,12 +11,12 @@ namespace CandidateAPI.Middleware
         public List<Candidate> ReturnResult(string[] skills, List<Candidate> candidates)
         {
             var result = new List<Candidate>();
-
+            
             foreach (var candidate in candidates)
             {
                 var skillsMatch = (
-                    from skillInput
-                        in skills
+                    from skillInput 
+                    in skills
                     let skillsArray = candidate.Skills
                     where skillsArray.Any(skill => skillInput == skill)
                     select skillInput).Count();
