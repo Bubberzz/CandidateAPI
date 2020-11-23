@@ -1,6 +1,6 @@
 # CandidateAPI
 
-A Web API that finds the best person for a job. The API should supports the following requests:
+A Web API that finds the best person for a job. The API supports the following requests:
 
 POST /candidates – add a candidate to the database (kept in memory). The request body is JSON shaped, as follows:
 {
