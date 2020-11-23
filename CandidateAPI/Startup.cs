@@ -29,6 +29,8 @@ namespace CandidateAPI
             services.AddDbContext<CandidateDbContext>(options => options.UseInMemoryDatabase("Candidates"));
 
             services.AddControllers();
+
+            services.AddScoped<ICandidateRepository, CandidateRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

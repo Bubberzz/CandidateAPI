@@ -19,6 +19,7 @@ namespace CandidateAPI.Data
             {
                 throw new ArgumentNullException(nameof(candidate));
             }
+            _context.Candidates.Add(candidate);
         }
 
         public IEnumerable<Candidate> GetCandidates(string[] skills)
