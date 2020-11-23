@@ -11,5 +11,13 @@ namespace CandidateAPI.Data
     {
         public CandidateDbContext(DbContextOptions<CandidateDbContext> options) : base(options) { }
         public DbSet<Candidate> Candidates { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Candidate>()
+                .Property(e => e.Skills)
+                .HasConversion(
+                    v => string.Join(',', v),
+                    v => v.Split(',', StringSplitOptions.RemoveEmptyEntries));
+        }
     }
 }
